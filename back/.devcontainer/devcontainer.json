@@ -16,7 +16,6 @@
         "esbenp.prettier-vscode",
         "GitHub.copilot",
         "mhutchie.git-graph",
-        "dsznajder.es7-react-js-snippets",
         "ms-python.python",
         "ms-toolsai.jupyter",
         "charliermarsh.ruff"
@@ -30,8 +29,15 @@
             "notebook.source.organizeImports": "explicit"
           },
           "[python]": {
-            "editor.defaultFormatter": "charliermarsh.ruff"
-          }
+          
+              "editor.formatOnSave": true,
+              "editor.codeActionsOnSave": {
+                "source.fixAll": "explicit",
+                "source.organizeImports": "explicit"
+              },
+              "editor.defaultFormatter": "charliermarsh.ruff"
+            }
+          
         
       }
     }
