@@ -1,0 +1,33 @@
+{
+	"name": "example",// コンテナ名
+	"build": {
+		"dockerfile": "Dockerfile" // Dockerfileのパス
+	},
+
+	// VScodeの設定
+	"customizations": {
+		"vscode": {
+			// 拡張機能のインストール
+			"extensions": [
+				"usernamehw.errorlens", // errorLens
+				"ms-python.python",// Python
+				"charliermarsh.ruff"// Ruff
+			],
+			// 拡張機能の設定
+			// ruffの設定を入れている
+			"settings": {
+				"notebook.formatOnSave.enabled": true,
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.codeActionsOnSave": {
+						"source.fixAll": "explicit",
+						"source.organizeImports": "explicit"
+					},
+					"notebook.codeActionsOnSave": {
+						"notebook.source.fixAll": "explicit"
+					}
+				}
+			}
+		}
+	}
+}
